@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+ul.thumb {
+    margin-left: 30px;
+    margin-top: 45px;
+    float: left;
+    list-style: none;
+    width: 490px;
+    height: 340px;
+}
+
+ul.thumb li {
+    margin: 0;
+    float: left;
+    position: relative; /* Set the absolute positioning base coordinate */
+    width: 120px;
+    height: 110px;
+}
+
+ul.thumb li img {
+    width: 100px;
+    height: 100px; /* Set the small thumbnail size */
+    -ms-interpolation-mode: bicubic; /* IE Fix for Bicubic Scaling */
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f0f0f0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+ul.thumb li img.hover {
+    /* Image used as background on hover effect*/
+     border: none; /* Get rid of border on hover */
+}

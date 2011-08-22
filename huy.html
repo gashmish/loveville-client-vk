@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        * {margin: 0; padding: 0;}
+img {border: none;}
+        ul.thumb {
+	float: left;
+	list-style: none;
+	margin: 0; padding: 10px;
+	width: 360px;
+}
+ul.thumb li {
+	margin: 0; padding: 5px;
+	float: left;
+	position: relative;  /* Set the absolute positioning base coordinate */
+	width: 110px;
+	height: 110px;
+}
+ul.thumb li img {
+	width: 100px; height: 100px; /* Set the small thumbnail size */
+	-ms-interpolation-mode: bicubic; /* IE Fix for Bicubic Scaling */
+	border: 1px solid #ddd;
+	padding: 5px;
+	background: #f0f0f0;
+	position: absolute;
+	left: 0; top: 0;
+}
+ul.thumb li img.hover {
+	background:url(images/thumb_bg.png) no-repeat center center;  /* Image used as background on hover effect
+	border: none; /* Get rid of border on hover */
+}
+        </style>
+</head>
+<body>
+<ul class="thumb">
+	<li><a href="#"><img src="images/test/thumb1.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb2.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb3.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb4.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb5.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb6.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb7.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb8.jpg" alt="" /></a></li>
+	<li><a href="#"><img src="images/test/thumb9.jpg" alt="" /></a></li>
+</ul>
+<script type="text/javascript">
+    $("ul.thumb li").hover(function() {
+	$(this).css({'z-index' : '10'}); /*Add a higher z-index value so this image stays on top*/
+	$(this).find('img').addClass("hover").stop() /* Add class of "hover", then stop animation queue buildup*/
+		.animate({
+			marginTop: '-110px', /* The next 4 lines will vertically align this image */
+			marginLeft: '-110px',
+			top: '50%',
+			left: '50%',
+			width: '174px', /* Set new width */
+			height: '174px', /* Set new height */
+			padding: '20px'
+		}, 200); /* this value of "200" is the speed of how fast/slow this hover animates */
+
+	} , function() {
+	$(this).css({'z-index' : '0'}); /* Set z-index back to 0 */
+	$(this).find('img').removeClass("hover").stop()  /* Remove the "hover" class , then stop animation queue buildup*/
+		.animate({
+			marginTop: '0', /* Set alignment back to default */
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px', /* Set width back to default */
+			height: '100px', /* Set height back to default */
+			padding: '5px'
+		}, 400);
+});
+</script>
+</body>
+</html>

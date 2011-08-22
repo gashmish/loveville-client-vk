@@ -1,0 +1,113 @@
+/* General Styles ( You don't need this for your button ) */
+.start_menu_girls {
+    background: url("../images/bg_girl_start_menu.jpg") no-repeat fixed #FFFFFF
+}
+
+.start_menu_boys {
+    background: url("../images/bg_boy_start_menu.jpg") no-repeat fixed #FFFFFF
+}
+
+.game_scene_girls {
+    background: url("../images/bg_girl_game_scene.jpg") no-repeat fixed #FFFFFF
+}
+
+.game_scene_boys {
+    background: url("../images/bg_boy_game_scene.jpg") no-repeat fixed #FFFFFF
+}
+
+#selectable_table {
+    margin-left: 16px;
+    margin-top: 40px;
+    width: 480px;
+    height: 340px;
+}
+
+#selectable_table td,th
+{
+    background: url("../images/100x100.png") no-repeat center;
+    margin-left: auto;
+    margin-right: auto;
+    width:120px;
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+#opponents_table {
+    margin-left: 15px;
+    margin-top: 75px;
+    width:490px;
+    height:130px;
+}
+
+#opponents_table td,th
+{
+    background: url("../images/50x50.png") no-repeat center;
+    width:87px;
+}
+
+.center {
+    width: 348px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.text {
+    font-size: 20px;
+    color: #666;
+    border-bottom: 1px solid black;
+}
+
+.return {
+    color: #809dba;
+}
+
+/*End General Styles*/
+
+/* Button Styles */
+
+.button1 /* Button with CSS only */
+{
+    background: url(../images/button_girl_1.png) no-repeat 0 0;
+    height: 420px;
+    width: 351px;
+    display: block;
+}
+
+.button1:hover {
+    background: url(../images/button_girl_2.png) no-repeat 0 0;
+}
+
+/* Button with jQuery */
+.button_girl {
+    background: url(../images/button_girl_2.png) no-repeat 0 0;
+    height: 351px;
+    width: 420px;
+    display: block;
+}
+
+.button_girl a {
+    background: url(../images/button_girl_1.png) no-repeat 0 0;
+    height: 351px;
+    width: 420px;
+    display: block;
+}
+
+.button_boy {
+    background: url(../images/button_boy_2.png) no-repeat 0 0;
+    height: 351px;
+    width: 420px;
+    display: block;
+}
+
+.button_boy a {
+    background: url(../images/button_boy_1.png) no-repeat 0 0;
+    height: 351px;
+    width: 420px;
+    display: block;
+}
